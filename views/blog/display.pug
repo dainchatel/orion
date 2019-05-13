@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block title
+    title West Orion
+
+block content
+    section(class="hero is-medium is-success")
+        .hero-body
+            .container
+                a(href="/").title West Orion
+    .container
+        .content
+            section(class="section posts")
+                if blogPosts.length === 0
+                    h2.has-text-centered We haven't published any post so far... stay tuned!
+                else
+                    each item in blogPosts
+                        .columns
+                            .column
+                                h6(id=item.title.replace(/\s/g, ''))
+                                  each para in item.content.split(/\n\r?/g).filter(a => a !== '')
+                                    p=para
+                                h5.breaker ☐ ☐ ☐

@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block title
+    title= blogPost ? blogPost.title : ""
+
+block content
+    if error
+        div(class="notification is-danger")= error.message
+
+    if blogPost
+        section(class="hero is-dark is-large")
+            if blogPost.posterUri
+                style.
+                    .header-image:before{
+                        background-image:url(#{blogPost.posterUri})
+                    }
+            div(class="hero-body header-image")
+                div(class="container has-text-centered")
+                    h1.title= blogPost.title
+
+        .container
+            .content
+                section.section!= blogPost.contentToHtml
+
+    
+block scripts
+  script.
+      window.__blogPostData = {
+          id: #{blogPost ? blogPost.id : 0},
+      };

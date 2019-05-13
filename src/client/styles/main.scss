@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+@import '../../../node_modules/bulma/sass/utilities/all';
+
+@import '../../../node_modules/bulma/sass/base/all.sass';
+@import '../../../node_modules/bulma/sass/layout/footer.sass';
+@import '../../../node_modules/bulma/sass/layout/hero.sass';
+@import '../../../node_modules/bulma/sass/layout/section.sass';
+@import '../../../node_modules/bulma/sass/grid/columns.sass';
+
+@import '../../../node_modules/bulma/sass/components/level.sass';
+@import '../../../node_modules/bulma/sass/components/media.sass';
+@import '../../../node_modules/bulma/sass/components/navbar.sass';
+
+@import '../../../node_modules/bulma/sass/elements/button.sass';
+@import '../../../node_modules/bulma/sass/elements/container.sass';
+@import '../../../node_modules/bulma/sass/elements/content.sass';
+@import '../../../node_modules/bulma/sass/elements/form.sass';
+@import '../../../node_modules/bulma/sass/elements/image.sass';
+@import '../../../node_modules/bulma/sass/elements/notification.sass';
+@import '../../../node_modules/bulma/sass/elements/other.sass';
+@import '../../../node_modules/bulma/sass/elements/title.sass';
+
+@import 'objects/objects.ratio';
+@import 'global';
+@import 'pages/home';
+@import 'pages/blogpost-view';
+@import 'pages/blogpost-edit';
+@import 'pages/admin-index';
+
+
+.navbar-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-end;
+  /* margin-right: auto; */
+  width: 100%;
+}
+
+.footer {
+  padding: 0;
+  background-color: white;
+}
+
+.hero.is-success, .hero.is-success .title, .hero.is-success .subtitle {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-weight: 200;
+}
+
+.hero-body {
+  padding: 3rem;
+}
+
+.hero.is-medium .hero-body {
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.column h4 a {
+  color: rgba(0, 0, 0, .5);
+  font-weight: 200;
+}
+
+.content h4 {
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 1em;
+  line-height: 1.38em;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: 'Times';
+}
+
+.column {
+  padding: 0 5em;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    padding: 0 .5em;
+  } 
+  .content p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  #admin-index .navbar-start .navbar-item {
+    margin-right: -6em;
+  } 
+}
+
+#phase0 {
+  background-color: rgba(0,0,0,.05);
+  border-radius: 10px;
+  padding: 2em;
+}
+
+#phase0 p {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 200;
+  font-size: .9em;
+  font-style: italic;
+}
+
+.content h5.breaker {
+  text-align: center;
+  font-size: 1.7em;
+  margin: 1.2em 0 1.4em 0;
+}
+
+.hero.is-large .hero-body {
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+  background-color: white;
+}
+
+.hero-body {
+  background-color: white;
+}
+
+.hero.is-dark .title {
+  color: black;
+  font-weight: 200;
+}
+
+.navbar-item {
+  text-align: right;
+  padding: 1.5em 2em 0 0;
+}
+
+.navbar-menu {
+  display: flex;
+  box-shadow: none !important;
+}
+
+#home-button {
+  padding: 0;
+}
+
+.navbar-item:hover {
+  background: white !important;
+}
+
+.navbar-menu:hover {
+  background: white !important;
+}
+
+.navbar-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: auto;
+}
